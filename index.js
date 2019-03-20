@@ -6,11 +6,11 @@ app.use(bodyParser.json());
 var list = [];
 
 //GET method
-app.get("/", (req, res) => {
+app.get("/hola", (req, res) => {
   res.send(list);
 });
 
-app.post("/", (req, res) => {
+app.post("/hola", (req, res) => {
   list.push(req.body);
   res.send(list);
 });
