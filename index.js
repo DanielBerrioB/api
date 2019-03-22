@@ -3,17 +3,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
 app.use(bodyParser.json());
-var list = [];
 
-//GET method
-app.get("/hola", (req, res) => {
-  res.send(list);
-});
-
-app.post("/hola", (req, res) => {
-  list.push(req.body);
-  res.send(list);
-});
+app.use('/', require('./routes/tasks'));
 
 //Port from
 var port = 3000;
