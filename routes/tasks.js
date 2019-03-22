@@ -39,12 +39,4 @@ app.post("/tasks/", (req, res) => {
   res.send(list);
 });
 
-
-app.delete("/task/:id", (req, res) => {
-  let element = req.params.id;
-  let elementList = list.find(i => i.id == element);
-  if(elementList)
-    
-});
-
 module.exports = app;
