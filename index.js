@@ -1,14 +1,13 @@
-//Need it expresions
+//The library is imported
 var express = require("express");
-var bodyParser = require("body-parser");
+var bodyparser = require("body-parser");
 var app = express();
-app.use(bodyParser.json());
 
-app.use('/', require('./routes/tasks'));
+app.use(bodyparser.json());
+app.use("/", require("./routes/tasks"));
 
-//Port from
-var port = 3000;
-
+var port = process.env.PORT || 3000;
+//The server is called with a port
 app.listen(port, () => {
-  console.log("I'm hearing this port");
+  console.log(`My API is running`);
 });
